@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Timing Function Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            background: steelblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 2s;
+            /* animate movement in 2s */
+            cursor: pointer;
+        }
+
+        /* Timing functions */
+        .ease:hover {
+            transform: translateX(300px);
+            transition-timing-function: ease;
+        }
+
+        .linear:hover {
+            transform: translateX(300px);
+            transition-timing-function: linear;
+        }
+
+        .ease-in:hover {
+            transform: translateX(300px);
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out:hover {
+            transform: translateX(300px);
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out:hover {
+            transform: translateX(300px);
+            transition-timing-function: ease-in-out;
+        }
+
+        .bezier:hover {
+            transform: translateX(300px);
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        /* custom curve: overshoots then comes back */
+    </style>
+</head>
+
+<body>
+    <h2>CSS transition-timing-function Demo</h2>
+    <p>Hover over each box → they move differently based on timing function.</p>
+
+    <div class="container">
+        <div class="box ease">ease</div>
+        <div class="box linear">linear</div>
+        <div class="box ease-in">ease-in</div>
+        <div class="box ease-out">ease-out</div>
+        <div class="box ease-in-out">ease-in-out</div>
+        <div class="box bezier">cubic-bezier</div>
+    </div>
+</body>
+
+</html>

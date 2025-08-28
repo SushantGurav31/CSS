@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            transition-property: background-color;
+            /* only animates background */
+            transition-duration: 2s;
+        }
+
+        .box:hover {
+            background-color: pink;
+            width: 300px;
+            /* changes instantly, no animation */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
