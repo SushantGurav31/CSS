@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transform Examples</title>
+  <style>
+    body{
+        font-family: Arial,sans-serif;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        background: #f0f0f0;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background: #3898db;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        transition: transform 0.5s;
+    }
+
+    /*each transform on hover */
+    .translate:hover {transform:translate(50px,30px);}
+    .rotate:hover {transform: rotate(45deg);}
+    .scaleX:hover {transform: scaleX(1.5);}
+    .scaleY:hover {transform: scaleY(1.5);}
+    .scale:hover {transform: scale(1.5,0.7);}
+    .skewX:hover {transform: skewX(30deg);}
+    .skewY:hover {transform: skewY(30deg);}
+    .skew:hover {transform: skew(20deg,20deg);}
+    .matrix:hover {transform: matrix(1, 0.5, -0.5, 1, 30, 20);}
+
+    h2{
+        text-align: center;
+        grid-column: 1/-1;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>CSS Transform Examples (Hover Each Box)</h2>
+
+  <div class="box translate">translate()</div>
+  <div class="box rotate">rotate()</div>
+  <div class="box scaleX">scaleX()</div>
+  <div class="box scaleY">scaleY()</div>
+  <div class="box scale">scale()</div>
+  <div class="box skewX">skewX()</div>
+  <div class="box skewY">skewY()</div>
+  <div class="box skew">skew()</div>
+  <div class="box matrix">matrix()</div>
+</body>
+</html>
